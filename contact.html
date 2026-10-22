@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Dhivya V. about AI, data analytics and student projects.">
+  <title>Contact | Dhivya V.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Dhivya V. home">Dhivya<span>.</span></a>
+  <nav aria-label="Primary navigation"><ul class="nav-list">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li><li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ul></nav>
+</header>
+
+<main class="page-main">
+  <section class="page-intro" aria-labelledby="contact-title">
+    <p class="eyebrow">Get in touch</p>
+    <h1 id="contact-title">Let’s connect.</h1>
+    <p>Have a project idea, collaboration opportunity or feedback? Send a message using the accessible form below.</p>
+  </section>
+
+  <section class="contact-layout" aria-label="Contact information and form">
+    <aside class="contact-card">
+      <h2>Contact details</h2>
+      <p><strong>Role:</strong> CSE (AI &amp; ML) Student</p>
+      <p><strong>Interests:</strong> AI Engineering, Data Analytics, Power BI</p>
+      <p><strong>Availability:</strong> Open to learning opportunities and student collaborations.</p>
+    </aside>
+
+    <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+      <div class="field"><label for="name">Name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required aria-required="true"></div>
+      <div class="field"><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required aria-required="true"></div>
+      <div class="field"><label for="subject">Subject <span aria-hidden="true">*</span></label><input id="subject" name="subject" type="text" required aria-required="true"></div>
+      <div class="field"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="6" required aria-required="true"></textarea></div>
+      <button class="button primary" type="submit" aria-label="Send your message">Send Message</button>
+      <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer"><p>&copy; 2026 Dhivya V. All rights reserved.</p></footer>
+
+<script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      status.textContent = "Please complete all required fields with valid information.";
+      form.reportValidity();
+      return;
+    }
+    status.textContent = "Thank you! Your message is ready to be connected to a backend.";
+    form.reset();
+  });
+</script>
+</body>
+</html>
